@@ -1,0 +1,3 @@
+{"_id":{"$numberInt":"2"},"name":"Jack","email":"admin@mail.ru","age":{"$numberInt":"43"},"hasCar":false,"favColors":["Красный","Белый"],"child":{"name":"Jack","surname":"Charley","age":{"$numberInt":"5"}}}
+{"_id":{"$oid":"5d147070d76ed35f4e4d98a6"},"name":"New User","hasCar":{"$numberInt":"23"},"password":"234","hasWife":true}
+{"_id":{"$oid":"5d147070d76ed35f4e4d98a7"},"name":"Jack","email":"admin@mail.ru","age":{"$numberInt":"43"},"hasCar":false,"favColors":["Красный","Белый"],"pasword":"xdhcgh6854"}

@@ -1,0 +1,6 @@
+{"_id":{"$oid":"5d147070d76ed35f4e4d98a6"},"name":"John","email":"test@mail.ru","age":{"$numberInt":"23"},"hasCar":true,"favColors":["Зеленый","Красный","Черный"],"child":{"name":"Jack","surname":"Charley","age":{"$numberInt":"5"}}}
+{"_id":{"$numberInt":"2"},"name":"Jack","email":"jack@mail.ru","age":{"$numberInt":"43"},"hasCar":false,"favColors":["Красный","Белый"],"child":{"name":"Jack","surname":"Charley","age":{"$numberInt":"5"}}}
+{"_id":{"$oid":"5d147070d76ed35f4e4d98a7"},"name":"Jack","email":"admin@mail.ru","age":{"$numberInt":"43"},"hasCar":false,"favColors":["Красный","Белый"],"pasword":"xdhcgh6854"}
+{"_id":{"$oid":"5d147070d76ed35f4e4d98a8"},"name":"George","email":"admin@test.ru","age":{"$numberInt":"22"},"hasCar":false,"birthday":{"$date":{"$numberLong":"849052800000"}}}
+{"_id":{"$oid":"5d147072d76ed35f4e4d98a9"},"name":"Боб","email":"bob@test.ru","age":{"$numberInt":"22"},"hasCar":false,"birthday":{"$date":{"$numberLong":"849052800000"}}}
+{"_id":{"$oid":"5d147072d76ed35f4e4d98aa"},"name":"Василий","email":"vasya@test.ru","age":{"$numberInt":"21"},"hasCar":false,"birthday":{"$date":{"$numberLong":"849052800000"}}}
