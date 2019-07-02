@@ -1,12 +1,29 @@
-// use itproger - создание БД
+//use itproger 
+//создание БД
+
 // db.createCollection("users") - создание коллекции
 
-db.users.updateOne({age: 22}, {$set: {age: 25}}); //обновит 1-ое значение в списке
-db.users.updateMany({age: 25}, {$set: {age: 23}});
-db.users.updateMany({age: 23}, {$set: {name: "User", email: "test@mail.ru"}});
-db.users.replaceOne(
-	{age: 23}, 
-	{name: "New User", hasCar: 23, password: "234", hasWife: true}
-); //полная замена объекта
-
-db.users.deleteMany({age: {$gte: 22}, age: {$lte: 38}});
+db.users.bulkWrite([
+  {
+	insertOne: {
+		document: {name: "John", age: 45, email: "mike@test.ru"}
+	}
+  },
+  {
+	deleteOne: {
+		filter: {age: 21}
+	}
+  },
+  {
+	updateMany: {
+		filter: {name: "Боб"},
+		update: {$set: {email: "new_email@test.ru"}}
+	}
+  },
+  {
+	replaceOne: {
+		filter: {name: "John"},
+		replacement: {name: "Джон", age: 45, email: "john@mail.ru"}
+	}
+  }
+]);

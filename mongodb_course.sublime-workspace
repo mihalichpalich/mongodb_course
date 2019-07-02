@@ -15,7 +15,16 @@
 			"file": "mongo.js",
 			"settings":
 			{
-				"buffer_size": 106,
+				"buffer_size": 119,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 220,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -34,7 +43,7 @@
 		[
 			[
 				"Package Control: ",
-				"Package Control: Install Package"
+				"Package Control: Remove Package"
 			],
 			[
 				"LiveReload: ",
@@ -66,6 +75,8 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Михаил/AppData/Roaming/Sublime Text 3/Packages/User/MongoDB.sublime-build",
+		"/C/Users/Михаил/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
 		"/F/mongodb_course/README.md",
 		"/F/mongodb_course/.gitignore",
 		"/C/Users/Михаил/Desktop/документы/nodejs_lessons/public/css/style.css",
@@ -119,7 +130,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -128,20 +139,48 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 106,
+						"buffer_size": 119,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								106,
-								106
+								119,
+								119
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "README.md",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 220,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								89
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -184,6 +223,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 248.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
