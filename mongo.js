@@ -3,27 +3,33 @@
 
 // db.createCollection("users") - создание коллекции
 
-db.users.bulkWrite([
+db.articles.insertMany([
   {
-	insertOne: {
-		document: {name: "John", age: 45, email: "mike@test.ru"}
-	}
+  	"title": "Акции компании Durex растут",
+  	"anons": "Открытие торгов. Компания стремительно набирает обороты",
+  	"text": "Рост акций по всем фронтам",
+  	"date": new Date('2020-11-11')
   },
   {
-	deleteOne: {
-		filter: {age: 21}
-	}
+  	"title": "Открытие кофейни",
+  	"anons": "Новая кофейня будет открыта в селе Большая Пысса",
+  	"text": "Все жители страны празднуют этот день!",
+  	"date": new Date('2021-11-11')
   },
   {
-	updateMany: {
-		filter: {name: "Боб"},
-		update: {$set: {email: "new_email@test.ru"}}
-	}
-  },
-  {
-	replaceOne: {
-		filter: {name: "John"},
-		replacement: {name: "Джон", age: 45, email: "john@mail.ru"}
-	}
+  	"title": "Новости города",
+  	"anons": "Подставки для компьютеров",
+  	"text": "Новые подставки для компьютеров были завезены в магазины",
+  	"date": new Date('2022-11-11')
   }
 ]);
+
+db.articles.createIndex({title: "text", anons: "text", text: "text"}); //указываем в каких полях мы отслеживаем 
+                                                                       //инф-ю
+db.articles.find({ $text: {$search: "жители"}});
+db.articles.find({ $text: {$search: "новые жители"}}); //выдаст объекты со словом "новые" или со словом 
+														//"жители"
+db.articles.find(
+	{ $text: {$search: "открытие кофейня"}},
+	{score: {$meta: "textScore"}} //вывод показателя релевантности, чем больше, тем выше релевантность
+).sort({score: {$meta: "textScore"}}); 
